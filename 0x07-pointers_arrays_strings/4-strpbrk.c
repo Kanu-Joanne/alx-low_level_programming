@@ -3,7 +3,7 @@
 /**
  * _strpbrk - a function that searches a string for any of a set of bytes
  * @accept: input
- * Return: Pointer to the first occurrence of any character from 'accept' in 's', or NULL if not found
+ * Return: Pointer
  */
 char *_strpbrk(char *s, char *accept)
 {
