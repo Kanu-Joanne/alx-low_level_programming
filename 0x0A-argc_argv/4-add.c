@@ -3,21 +3,20 @@
 #include <ctype.h>
 #include <string.h>
 /**
- * add_numbers - a program that adds positive numbers.
- * @str: array string
+ * check_num - a program that adds positive numbers.
+ * @str: array str
  *
  * Return: Always 0 (Success)
  */
-int add_numbers(char *str)
+int check_num(char *str)
 {
-	/*Declaring variables*/
 	unsigned int cnt;
 
 	cnt = 0;
 	while (cnt < strlen(str))
 
 	{
-		if (!isdigit(str[cnt])) /*check if str there are digit*/
+		if (!isdigit(str[cnt]))
 		{
 			return (0);
 		}
@@ -28,8 +27,8 @@ int add_numbers(char *str)
 }
 
 /**
- * main -a function
- * argc: Count arguments
+ * main - a function that checks
+ * @argc: Count arguments
  * @argv: Arguments
  *
  * Return: Always 0 (Success)
@@ -39,27 +38,26 @@ int main(int argc, char *argv[])
 
 {
 
-	int count;
+	int cnt;
 	int str_to_int;
 	int sum = 0;
 
-	count = 1;
-	while (count < argc)
+	cnt = 1;
+	while (cnt < argc)
 	{
-		if (check_num(argv[count]))
+		if (check_num(argv[cnt]))
 
 		{
-			str_to_int = atoi(argv[count]);
+			str_to_int = atoi(argv[cnt]);
 			sum += str_to_int;
 		}
-
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
 
-		count++;
+		cnt++;
 	}
 
 	printf("%d\n", sum);
