@@ -58,14 +58,14 @@ void errors(void)
  */
 int main(int argc, char *argv[])
 {
-	char *str1, *str2;
+	char *s1, *s2;
 	int length1, length2, length, x, carry, digit1, digit2, *res, a = 0;
 
-	str1 = argv[1], str2 = argv[2];
+	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	length1 = _strlen(str1);
-	length2 = _strlen(str2);
+	length1 = _strlen(s1);
+	length2 = _strlen(s2);
 	length = length1 + length2 + 1;
 	res = malloc(sizeof(int) * length);
 	if (!res)
@@ -74,11 +74,11 @@ int main(int argc, char *argv[])
 		res[x] = 0;
 	for (length1 = length1 - 1; length1 >= 0; length1--)
 	{
-		digit1 = str1[length1] - '0';
+		digit1 = s1[length1] - '0';
 		carry = 0;
-		for (length2 = _strlen(str2) - 1; length2 >= 0; length2--)
+		for (length2 = _strlen(s2) - 1; length2 >= 0; length2--)
 		{
-			digit2 = str2[length2] - '0';
+			digit2 = s2[length2] - '0';
 			carry += res[length1 + length2 + 1] + (digit1 * digit2);
 			res[length1 + length2 + 1] = carry % 10;
 			carry /= 10;
