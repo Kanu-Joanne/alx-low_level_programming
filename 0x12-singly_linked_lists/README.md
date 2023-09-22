@@ -1,1 +1,1 @@
-this is a readme file for the singly linked list project
+this is a readme file for the project singly linked lists
